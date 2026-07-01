@@ -1,0 +1,104 @@
+:root {
+    --body-bg: #eee;
+    --text-main: #333;
+    --text-highlight: oklch(0.5845 0.099 230.1);
+    --highlight-less-saturated: oklch(0.5845 0.05 230.1 / .8);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: serif
+}
+
+body {
+    background-color: var(--body-bg);
+    padding: 8px;
+    font-size: 14px;
+    color: var(--text-main);
+}
+
+nav {
+   width: 100%;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+}
+
+h1, h2, h3, a, a:visited {
+    color: var(--text-highlight);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: var(--highlight-less-saturated);
+    margin: 16px auto;
+}
+
+ul {
+    list-style-type: square;
+}
+
+table {
+    width: 100%;
+    border: 1px solid var(--text-main);
+}
+
+table th, table td {
+    border: 1px solid var(--text-main);
+    padding: 4px;
+    text-align: left;
+}
+
+input:focus, textarea:focus {
+    outline: 3px solid  var(--text-highlight); 
+}
+
+.accent {
+    color: var(--text-highlight);
+}
+
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.pt-12 {
+    padding-top: 12px;
+}
+
+.small {
+    font-size:10px;
+}
+
+.muted {
+    color: #666;
+}
+
+/* this should really just be class called "required", but i needed id selectors*/
+#first-name-required, #last-name-required, #company-name-required, #contact-time-required, #phone-required, #email-required {
+    color: red;
+    padding: 0 4px 0 0;
+}
